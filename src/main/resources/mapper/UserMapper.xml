@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间  给sql隔离 -->
-<mapper namespace="user">
+<mapper namespace="com.fengze.mybatis.mapper.UserMapper">
     <!-- 单表增删改查 -->
     <!-- UserDo : mybatis-config.xml里typeAliases下typeAliase-别名 -->
     <!-- id   参数   结果 -->

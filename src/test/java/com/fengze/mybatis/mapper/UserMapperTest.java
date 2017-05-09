@@ -43,7 +43,7 @@ public class UserMapperTest {
     @Test
     public void queryById() throws Exception {
         UserDo userDo = new UserDo();
-        userDo.setUserId(1003L);
+        userDo.setUserId(1001L);
 
         UserMapper mapper=session.getMapper(UserMapper.class);
 

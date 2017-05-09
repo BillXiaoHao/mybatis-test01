@@ -112,7 +112,7 @@ public class UserMapperTest {
     public void delUser() throws Exception {
         UserDo userDo = new UserDo();
 
-        userDo.setUserId(1003L);
+        userDo.setUserId(1002L);
 
         UserMapper mapper = session.getMapper(UserMapper.class);
 

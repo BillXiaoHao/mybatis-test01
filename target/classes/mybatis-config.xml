@@ -26,11 +26,19 @@
         </environment>
     </environments>
 
+    <!--重要 1.当使用扫描的时候，扫描的是xml，而不是Mapper接口-->
+    <!--重要 2.当单独扫描Mapper接口时，且Mapper接口与xml不在同一目录时，会报错-->
+    <!--重要 3.当单独扫描xml映射文件时，则是正确的，因我们配置了namespace就是Mapper接口的全路径类名-->
     <mappers>
-        <!--1.映射文件要和Mapper接口名称要一致-->
-        <!--2.映射文件和Mapper接口要在同一个包下-->
-        <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/userMapper.xml"/>
+        <!-- 通过mapper元素的resource属性可以指定一个相对于类路径的Mapper.xml文件 -->
+        <!--<mapper resource="com/fengze/mybatis/mapper/UserMapper.xml"/>-->
+        <!-- 通过package元素将会把指定包下面的所有Mapper接口进行注册 -->
         <!--<package name="com.fengze.mybatis.mapper"/>-->
+        <!-- 通过mapper元素的url属性可以指定一个通过URL请求道的Mapper.xml文件 -->
+        <!--<mapper url="file:///E:/UserMapper.xml"/>-->
+        <!-- 通过mapper元素的class属性可以指定一个Mapper接口进行注册 -->
+        <!--<mapper class="com.fengze.mybatis.mapper.UserMapper"/>-->
     </mappers>
 
 </configuration>

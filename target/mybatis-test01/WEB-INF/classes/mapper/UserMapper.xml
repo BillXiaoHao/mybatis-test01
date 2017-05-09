@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间  给sql隔离 -->
+<mapper namespace="user">
+    <!-- UserDo : mybatis-config.xml里typeAliases下typeAliase-别名 -->
+    <!-- id   参数   结果 -->
+    <select id="queryById" parameterType="UserDo" resultType="UserDo">
+        SELECT USER_ID USERID,USER_NAME USERNAME,PASS_WORD PASSWORD FROM TB_USER WHERE USER_ID=#{userId}
+    </select>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="UserDo">
+        SELECT USER_ID USERID,USER_NAME USERNAME,PASS_WORD PASSWORD FROM TB_USER WHERE USER_ID=#{id}
+    </select>
+</mapper>

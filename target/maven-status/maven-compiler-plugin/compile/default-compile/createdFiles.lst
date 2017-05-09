@@ -1,0 +1,3 @@
+com\fengze\mybatis\domain\BaseDo.class
+com\fengze\mybatis\dao\UserDao.class
+com\fengze\mybatis\domain\UserDo.class
